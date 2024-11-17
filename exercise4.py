@@ -27,6 +27,9 @@ def set_negatives_to_zero(arr):
     >>> set_negatives_to_zero(arr)
     array([], dtype=float64)
     """
+    copy = arr.copy()
+    copy [copy < 0] = 0
+    return copy
 
 
 

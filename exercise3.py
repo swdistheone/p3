@@ -24,6 +24,7 @@ def count_negatives(arr):
     4
     """
     # Use boolean indexing to create a mask for negative values and count them
+    return int(np.sum(arr < 0))
 
 
 # Example usage for doctest

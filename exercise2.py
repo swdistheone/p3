@@ -47,7 +47,10 @@ def custom_matrix(n, a, b, c):
     ... ]))
     True
     """
-    pass
+    matrix = np.full((n, n), b)
+    matrix[np.tril_indices(n, -1)] = c
+    np.fill_diagonal(matrix, a)
+    return matrix
 
 # Example usage
 if __name__ == "__main__":

@@ -46,7 +46,10 @@ def matrix_multiply(A, B):
     >>> np.array_equal(matrix_multiply(A, I), A)
     True
     """
-    pass
+    if A.shape[1] != B.shape[0]:
+        raise ValueError("Incompatible dimensions for the matrix multiplication.")
+    return np.dot(A, B)
+    
 
 if __name__ == "__main__":
     import doctest
